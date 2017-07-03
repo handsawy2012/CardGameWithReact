@@ -1,0 +1,130 @@
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: #00a651;
+}
+
+
+.fa-star{
+  margin: 0.5em;
+  font-size: 24px;
+}
+
+button
+{
+  float: left;
+  text-align: center;
+  font-size: 24px;
+  margin-top: 40px;
+  
+}
+
+
+span, hr,  h3, .playAgainLink{
+  color: white;
+  text-align: center;
+  font-size: 18px;
+  margin-left: 20px;
+}
+
+.pass{
+  font-size: 10px,
+}
+
+.selected {
+  background-color: #eee;
+  color: #ddd;
+  cursor: not-allowed;
+}
+
+.used {
+  background-color: #aaddaa;
+  color: #99bb99;
+  cursor: not-allowed;
+}
+
+.card {
+  position: relative;
+  float: left;
+  margin-right: 20px;
+  margin-top: 40px;
+  width: 150px;
+  height: 220px;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 6px 6px 14px rgba(0,0,0,0.3);
+  -webkit-box-shadow:  6px 6px 14px rgba(0,0,0,0.3);
+}
+
+.player {
+  float: left;
+}
+
+.activePlayer, h2 {
+  color: white;
+  font-weight: 700;
+  text-shadow: 6px 6px 14px rgba(0,0,0,0.8);
+  -webkit-text-shadow:  6px 6px 14px rgba(0,0,0,0.8);
+}
+
+.notActive {
+  font-weight: 400;
+}
+
+.wildCard {
+  float: left;
+}
+
+.playersInfo {
+  float: right;
+}
+
+.card p, .card1 p, .card2 p, .card3 p, .card4 p {
+  font: 100px/220px Georgia, Times New Roman, serif;
+  text-align: center;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+}
+
+.suitdiamonds:before, .suitdiamonds:after {
+  content: "♦";
+  color: #ff0000;
+}
+
+.suithearts:before, .suithearts:after {
+  content: "♥";
+  color: #ff0000;
+}
+
+.suitclubs:before, .suitclubs:after {
+  content: "♣";
+  color: #000;
+}
+
+.suitspades:before, .suitspades:after {
+  content: "♠";
+  color: #000;
+}
+
+div[class*='suit']:before {
+  position: absolute;
+  font-size: 35px;
+  left: 5px;
+  top: 5px;
+}
+
+div[class*='suit']:after {
+  position: absolute;
+  font-size: 35px;
+  right: 5px;
+  bottom: 5px;
+  }
+
+
