@@ -300,7 +300,6 @@ class Game extends React.Component{
                             <div className="playersInfo" >
                             {
                                 this.state.players.map((player,i) =>
-                                    <div>
                                     <PlayerInfo selectedCards={this.state.selectedCards}
                                                 cardsOnHand={player.cardsOnHand}
                                                 points={player.points}
@@ -312,7 +311,6 @@ class Game extends React.Component{
                                                 activePlayerIndex = {this.state.activePlayerIndex}
                                                 activeCard = {this.activeCard}/>
                                                 
-                                    </div>
                                     )
                             }
                             </div>
