@@ -268,9 +268,16 @@ class Game extends React.Component{
             <tbody>
                 <tr>
                     <td>
-                        <h3>Card Game </h3>
-                        <h3>Remaining Cards : {this.gameCards.cardCount()}</h3>
-                        <h3>Used Cards : {this.usedCards}</h3>
+                    {
+                        !this.state.doneStatus?
+                            <div>
+                                <h3>Card Game </h3>
+                                <h3>Remaining Cards : {this.gameCards.cardCount()}</h3>
+                                <h3>Used Cards : {this.usedCards}</h3>
+                            </div>
+                            :
+                            <p/>
+                    }
                     </td>
                 </tr>
                 <tr>

@@ -5,8 +5,14 @@ body {
   padding: 0;
   font-family: sans-serif;
   background: #00a651;
+  text-align: center;
 }
 
+form {
+    display: inline-block;
+    text-align: center;
+    margin-top: 20em;
+}
 
 .fa-star{
   margin: 0.5em;
@@ -46,12 +52,17 @@ span, hr,  h3, .playAgainLink{
   cursor: not-allowed;
 }
 
+table{
+  width: 100%;
+}
+
 td{
   text-align: -webkit-center;
 }
+
 .card {
   position: relative;
-  margin-right: 10px;
+  margin-right: 40px;
   margin-top: 20px;
   width: 120px;
   height: 176px;

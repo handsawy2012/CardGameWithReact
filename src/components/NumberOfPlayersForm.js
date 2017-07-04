@@ -20,17 +20,15 @@ class NumberOfPlayersForm extends React.Component {
         event.preventDefault()
         const noOfPlayers = event.target.elements[0].value
         const path = '/App/' + noOfPlayers;
-
-        // alert('A name was submitted: ' + this.state.value);
         this.props.history.push(path)
     }
 
     render() {
         return (
             <div>
-                <label>
+                <span>
                     No of players:
-                </label>
+                </span>
                 <form onSubmit={this.handleSubmit} >
                     <input type="text" 
                            value={this.state.value} 
