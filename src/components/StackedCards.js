@@ -23,12 +23,11 @@ const StackedCards = (props) => {
                     <p/>
             }
 
-            <div>
-                <button onClick={() => props.passPlay(props.playerIndex)}
+                <div onClick={() => props.passPlay(props.playerIndex)}
+                    className={"card pass"}
                         disabled={props.played || props.activePlayerIndex != props.playerIndex}>
-                    Pass....
-                </button>
-            </div>
+                    <p className={"pass"}>Pass</p>
+                </div>
         </div>
     );
 }

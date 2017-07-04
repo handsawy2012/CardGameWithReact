@@ -133,17 +133,8 @@ class Game extends React.Component{
         {
             if(!this.players[i].pass)
             {
-                for(var j = 0; j < this.players[i].cardsOnHand.length; j++)
-                {
-                    if(!this.state.selectedCards.find((card)=> card.id == this.players[i].cardsOnHand[j].id))
-                    {
-                        if(this.players[i].cardsOnHand[j].suit == activeCardSuit)
-                        {
-                            allPass = false;
-                            break;
-                        }
-                    }
-                }
+                allPass = false;
+                break;
             }
         }
         
@@ -274,10 +265,13 @@ class Game extends React.Component{
     render(){
         return(
             <table>
+            <tbody>
                 <tr>
-                    <h3>Card Game </h3>
-                    <h3>Remaining Cards : {this.gameCards.cardCount()}</h3>
-                    <h3>Used Cards : {this.usedCards}</h3>
+                    <td>
+                        <h3>Card Game </h3>
+                        <h3>Remaining Cards : {this.gameCards.cardCount()}</h3>
+                        <h3>Used Cards : {this.usedCards}</h3>
+                    </td>
                 </tr>
                 <tr>
                     <td>
@@ -287,6 +281,10 @@ class Game extends React.Component{
                                     playerName={this.GetTheWinnerName()}/> :
                                     <WildCard activeCard = {this.activeCard}/>
                         }
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
                     </td>
                     <td rowSpan="2">
                     {
@@ -314,25 +312,29 @@ class Game extends React.Component{
                     }
                     </td>
                 </tr>
-                <tr colspan="2">
+                <tr colSpan="2">
                     <td>
                         <div>
                         {
                             !this.state.doneStatus?
-                            <StackedCards selectedCards = {this.state.selectedCards}
-                                            cardsOnHand = {this.activePlayer()? this.activePlayer().cardsOnHand : null}
-                                            points = {this.activePlayer()? this.activePlayer().points : null}
-                                            selectCard = {this.selectCard}
-                                            passPlay = {this.passPlay}
-                                            playerIndex = {this.state.activePlayerIndex}
-                                            key = {this.state.activePlayerIndex}
-                                            activePlayerIndex = {this.state.activePlayerIndex}
-                                            activeCard = {this.activeCard}/>:
-                            <NavLink to="/" className="playAgainLink">Play again...</NavLink>
+                                <StackedCards selectedCards = {this.state.selectedCards}
+                                                cardsOnHand = {this.activePlayer()? this.activePlayer().cardsOnHand : null}
+                                                points = {this.activePlayer()? this.activePlayer().points : null}
+                                                selectCard = {this.selectCard}
+                                                passPlay = {this.passPlay}
+                                                playerIndex = {this.state.activePlayerIndex}
+                                                key = {this.state.activePlayerIndex}
+                                                activePlayerIndex = {this.state.activePlayerIndex}
+                                                activeCard = {this.activeCard}/>
+                                :
+                                <NavLink to="/" className="playAgainLink">
+                                    Play again...
+                                </NavLink>
                         }
                         </div>                        
                     </td>
                 </tr>
+            </tbody>
             </table>
         );
     }

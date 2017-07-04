@@ -10,17 +10,13 @@ const PlayerInfo = (props) => {
     }
 
     return(
-            <div className={"row " + playerClassName()}>
+            <div className={playerClassName()}>
                 <span>
-                    Points Collected: {props.points}</span>
-                <br/>
-                <span>
-                    Player Name: {props.name}
+                    {props.name}: {props.points}
                 </span>
-
                 <br/>
-                                                <hr/>
-                                                <br/>
+                <hr/>
+                <br/>
             </div>
     );
 }

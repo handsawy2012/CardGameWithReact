@@ -46,21 +46,34 @@ span, hr,  h3, .playAgainLink{
   cursor: not-allowed;
 }
 
+td{
+  text-align: -webkit-center;
+}
 .card {
   position: relative;
-  float: left;
-  margin-right: 20px;
-  margin-top: 40px;
-  width: 150px;
-  height: 220px;
+  margin-right: 10px;
+  margin-top: 20px;
+  width: 120px;
+  height: 176px;
   border-radius: 10px;
   background: #fff;
   box-shadow: 6px 6px 14px rgba(0,0,0,0.3);
   -webkit-box-shadow:  6px 6px 14px rgba(0,0,0,0.3);
+  -webkit-box-shadow-color:  red;
+  cursor: pointer;
 }
 
 .player {
   float: left;
+}
+
+.pass {
+  float: left;
+  font-size: 1em;
+}
+
+.pass p {
+  font-size: .1em;
 }
 
 .activePlayer, h2 {
@@ -68,6 +81,7 @@ span, hr,  h3, .playAgainLink{
   font-weight: 700;
   text-shadow: 6px 6px 14px rgba(0,0,0,0.8);
   -webkit-text-shadow:  6px 6px 14px rgba(0,0,0,0.8);
+  -webkit-box-shadow-color: yellow;
 }
 
 .notActive {
@@ -78,12 +92,19 @@ span, hr,  h3, .playAgainLink{
   float: left;
 }
 
-.playersInfo {
-  float: right;
+.card p, .card1 p, .card2 p, .card3 p, .card4 p {
+  font: 75px/170px Georgia, Times New Roman, serif;
+  text-align: center;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
 }
 
-.card p, .card1 p, .card2 p, .card3 p, .card4 p {
-  font: 100px/220px Georgia, Times New Roman, serif;
+.pass p {
+  font: 60px/170px Georgia, Times New Roman, serif;
   text-align: center;
   -webkit-touch-callout: none; /* iOS Safari */
   -webkit-user-select: none; /* Safari */
